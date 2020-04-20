@@ -25,7 +25,7 @@ SECRET_KEY = '2+qjfv9^6=l$d8e$38!(y+dj)%05ic-)etl8zlp*)ndc3ui(ln'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ideateapp.herokuapp.com']
 
 
 # Application definition

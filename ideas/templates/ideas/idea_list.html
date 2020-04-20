@@ -1,0 +1,26 @@
+{% extends 'ideas/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link href={% static "users/users.css" %} rel="stylesheet">
+{% endblock extra_css %}
+{% block content %}
+<header class="custom-header text-center text-white">
+    <div class="container" style="height: 100%;">
+        <div class="row align-items-center h-100">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+                <h1 class="mb-3">My Ideas</h1>
+                <div class="container h-100">
+                    {% if ideas %}
+                    {% for idea in ideas %}
+                    <a class="btn btn-primary btn-l mb-2 ml-1 rounded-pill"
+                            href="{% url 'idea-update' idea.id %}">{{ idea.title }}</a>
+                    {% endfor %}
+                    {% else %}
+                    <p>No ideas found. Create a new idea.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock content %}

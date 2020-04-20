@@ -1,0 +1,31 @@
+{% extends 'ideas/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link href={% static "users/users.css" %} rel="stylesheet">
+{% endblock extra_css %}
+{% block content %}
+<header class="custom-header text-center text-white">
+    <div class="container" style="height: 100%;">
+        <div class="row align-items-center justify-content-center h-100">
+            <div class="col-6 col-sm-6 col-md-6 col-lg mx-auto">
+                <h1 class="mb-3">Ideas for #{{ tag.name }}</h1>
+                {% if ideas %}
+                    <div class="card-columns">
+                        {% for idea in ideas %}
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">{{ idea.title }}</h6>
+                                <p class="card-text">{{ idea.description }}</p>
+                                <p class="card-text"><small>- {{ idea.author }}</small></p>
+                            </div>
+                        </div
+                        {% endfor %}>
+                    </div>
+                {% else %}
+                <p>No ideas found.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock content %}

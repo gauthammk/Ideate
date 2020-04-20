@@ -1,0 +1,86 @@
+.custom-input, .custom-input:active{
+    background-color: #E74C3C;
+    border-color: #ffffff;
+    border-width: 0.2rem;
+    color: #ffffff;
+    font-size: large;
+  }
+  
+  ::-webkit-input-placeholder{
+    color: #ffffff !important;
+  }
+  
+  .custom-input:focus {
+    background-color: #E74C3C!important;
+    color: #ffffff;
+    transition: all 0.4s;
+    border-color: #ffffff;
+    border-width: 0.4rem;
+    box-shadow: none;
+  }
+
+  .custom-header{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 5rem;
+    background: #E74C3C;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .custom-textarea{
+    border-radius: 1rem;
+  }
+
+  .border{
+    background-color: #E74C3C;
+    border-color: #ffffff;
+    border-width: 0.2rem !important;
+    color: #ffffff;
+    font-size: large;
+    border-radius: 1rem;
+  }
+  
+  a.custom-links{
+    color: #ffffff;
+    font-weight: 5rem;
+  }
+
+  .card{
+    background-color: #E74C3C;
+    border-color: #ffffff;
+    border-width: 0.2rem;
+    border-radius: 1rem;
+  }
+
+  .bootstrap-select {
+    background-color: #E74C3C;
+    border-color: #ffffff;
+    border-width: 0.2rem;
+    color: #ffffff;
+    font-size: large;
+    border-radius: 1rem;
+  }
+  
+  .bootstrap-select .btn{
+    background-color: #E74C3C;
+    border-color: #ffffff;
+    border-width: 0.2rem;
+    color: #ffffff !important;
+    font-size: large;
+    border-radius: 1rem;
+  }
+
+  .bootstrap-select .dropdown-menu {
+    border-width: 0.2rem;
+    font-size: large;
+    border-radius: 1rem;
+  }
+
+  select::-ms-expand {
+    /* for IE 11 */
+    display: none;
+  }

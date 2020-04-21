@@ -8,22 +8,80 @@
         <h1 class="masthead-heading mb-0">Ideate.</h1>
         <p class="masthead-body mb-0 font-weight-bold">verb | /ˈʌɪdɪeɪt/</p>
         <p class="masthead-body mb-5 font-italic">form an idea of, imagine or conceive.</p>
-        <a href="#" class="btn btn-primary btn-xl mt-5 rounded-pill">Learn More</a>
+        <a href="#about" class="btn btn-primary btn-xl mt-5 rounded-pill">Learn More</a>
       </div>
     </div>
   </header>
   <hr class="m-0">
-  <section>
-    <div class="container">
+  <section id="about">
+    <div class="container my-auto">
       <div class="row align-items-center">
         <div class="col-lg-6 order-lg-2">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="{% static "ideas/img/keanu.jpg" %}" alt="">
+            <img class="img-fluid rounded-circle" src="{% static "ideas/img/computer.png" %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Inspiration is just a click away...</h2>
+            <p>Browse through thousands of unique ideas in software development, story writing, art, music, photography
+              and
+              more.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="m-0">
+  <section>
+    <div class="container my-auto">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="{% static "ideas/img/bulb.png" %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <h2 class="display-4">Where creativity runs free...</h2>
+            <p>Explore your creative side by posting noteworthy content to motivate thousands of users from across the
+              globe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="m-0">
+  <section>
+    <div class="container my-auto">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="{% static "ideas/img/photography.png" %}" alt="">
           </div>
         </div>
         <div class="col-lg-6">
           <div class="p-5">
-            <h2 class="display-4">Where creativity runs free...</h2>
+            <h2 class="display-4">Say goodbye to long hours of detailed research...</h2>
+            <p>Get started on your project instantly with curated ideas from our creative community.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="m-0">
+  <section>
+    <div class="container my-auto">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="{% static "ideas/img/logo.png" %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <h2 class="display-4">All that and much much more...</h2>
+            <a href="{% url 'register' %}" class="btn btn-secondary btn-l mb-2 ml-1 rounded-pill">Register Now</a>
           </div>
         </div>
       </div>
@@ -32,3 +90,16 @@
   <hr class="m-0">
 </div>
 {% endblock content%}
+{% block extra_js %}
+<script>
+  $("a[href^='#']").click(function (e) {
+    e.preventDefault();
+
+    var position = $($(this).attr("href")).offset().top;
+
+    $("body, html").animate({
+      scrollTop: position
+    } /* speed */);
+  });
+</script>
+{% endblock extra_js %}

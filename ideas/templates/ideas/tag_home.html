@@ -1,13 +1,10 @@
 {% extends 'ideas/base.html' %}
 {% load static %}
-{% block extra_css %}
-<link href={% static "users/users.css" %} rel="stylesheet">
-{% endblock extra_css %}
 {% block content %}
 <header class="custom-header text-center text-white">
     <div class="container" style="height: 100%;">
         <div class="row align-items-center justify-content-center h-100">
-            <div class="col-6 col-sm-6 col-md-6 col-lg mx-auto">
+            <div class="col-lg mx-auto">
                 <h1 class="mb-3">Ideas for #{{ tag.name }}</h1>
                 {% if ideas %}
                     <div class="card-columns">

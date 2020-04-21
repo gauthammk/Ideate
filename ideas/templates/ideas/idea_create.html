@@ -1,13 +1,10 @@
 {% extends 'ideas/base.html' %}
 {% load static %}
-{% block extra_css %}
-<link href={% static "users/users.css" %} rel="stylesheet">
-{% endblock extra_css %}
 {% block content %}
 <header class="custom-header text-center text-white">
     <div class="container" style="height: 100%;">
         <div class="row align-items-center h-100">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+            <div class="col-lg-6 mx-auto">
                 <div class="container h-100">
                     <h1 class="mb-3">Create New Idea</h1>
                     <form method="POST">

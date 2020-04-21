@@ -44,8 +44,9 @@ def loginUser(request):
                 login(request, user)
                 return redirect('home')
             else:
-                raise ValidationError(
-                    "Sorry, that login was invalid. Please try again.")
+                messages.error(
+                    request, 'The username or password you have provided is incorrect.')
+                return redirect('login')
     else:
         form = LoginForm()
     return render(request, 'users/login.html', {'form': form,

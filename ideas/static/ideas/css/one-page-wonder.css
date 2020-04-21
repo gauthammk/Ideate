@@ -7,6 +7,7 @@
 body {
   font-family: 'Source Sans Pro';
   height: 100vh;
+  font-weight: 100;
 }
 
 h1,
@@ -36,10 +37,15 @@ h6 {
 }
 
 .navbar-custom {
+  background-color: #E74C3C;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navbar-custom {
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #E74C3C;
-  height: 4rem;
 }
 
 .navbar-custom .navbar-brand {
@@ -56,6 +62,16 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.1rem;
 }
+
+/* .navbar-toggler-custom{
+  background-color: #E74C3C !important;
+  color: #ffffff;
+  box-shadow: #ffffff !important;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  border-width: 0.2rem;
+  border-color: #E74C3C;
+} */
 
 header.masthead {
   height: calc(100vh);
@@ -134,10 +150,6 @@ header.masthead .bg-circle-4 {
   }
 }
 
-section{
-  height: 100vh;
-}
-
 .bg-primary {
   background-color: #E74C3C !important;
 }
@@ -152,20 +164,20 @@ section{
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   background-color: #E74C3C !important;
   color: #ffffff;
+  box-shadow: none !important;
 }
 
 .btn-secondary {
-  background-color: #ff6a00;
-  border-color: #ff6a00;
+  background-color: #E74C3C;
+  border-color: #E74C3C;
+  border-width: 0.2rem;
 }
 
 .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
-  background-color: #cc5500 !important;
-  border-color: #cc5500 !important;
-}
-
-.btn-secondary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+  background-color: #ffffff !important;
+  border-color: #E74C3C !important;
+  color: #E74C3C;
+  box-shadow: none !important;
 }
 
 a.underline {
@@ -195,3 +207,90 @@ a.underline:hover:after {
   width: 100%; 
   left: 0; 
 }
+
+.custom-input, .custom-input:active{
+    background-color: #E74C3C;
+    border-color: #ffffff;
+    border-width: 0.2rem;
+    color: #ffffff;
+    font-size: large;
+  }
+  
+  ::-webkit-input-placeholder{
+    color: #ffffff !important;
+  }
+  
+  .custom-input:focus {
+    background-color: #E74C3C!important;
+    color: #ffffff;
+    transition: all 0.4s;
+    border-color: #ffffff;
+    border-width: 0.4rem;
+    box-shadow: none;
+  }
+
+  .custom-header{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 5rem;
+    background: #E74C3C;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .custom-textarea{
+    border-radius: 1rem;
+  }
+
+  .border{
+    background-color: #E74C3C;
+    border-color: #ffffff;
+    border-width: 0.2rem !important;
+    color: #ffffff;
+    font-size: large;
+    border-radius: 1rem;
+  }
+  
+  a.custom-links{
+    color: #ffffff;
+    font-weight: 5rem;
+  }
+
+  .card{
+    background-color: #E74C3C;
+    border-color: #ffffff;
+    border-width: 0.2rem;
+    border-radius: 1rem;
+  }
+
+  .bootstrap-select {
+    background-color: #E74C3C;
+    border-color: #ffffff;
+    border-width: 0.2rem;
+    color: #ffffff;
+    font-size: large;
+    border-radius: 1rem;
+  }
+  
+  .bootstrap-select .btn{
+    background-color: #E74C3C;
+    border-color: #ffffff;
+    border-width: 0.2rem;
+    color: #ffffff !important;
+    font-size: large;
+    border-radius: 1rem;
+  }
+
+  .bootstrap-select .dropdown-menu {
+    border-width: 0.2rem;
+    font-size: large;
+    border-radius: 1rem;
+  }
+
+  select::-ms-expand {
+    /* for IE 11 */
+    display: none;
+  }

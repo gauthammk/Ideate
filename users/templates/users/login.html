@@ -1,13 +1,10 @@
 {% extends 'ideas/base.html' %}
 {% load static %}
-{% block extra_css %}
-<link href={% static "users/users.css" %} rel="stylesheet">
-{% endblock extra_css %}
 {% block content %}
 <div class="custom-header text-center text-white">
     <div class="container" style="height: 100%;">
         <div class="row align-items-center h-100">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6 mx-auto">
+            <div class="col-lg-6 mx-auto">
                 <h1 class="mb-3">Log In</h1>
                 <form method="POST">
                     {% csrf_token %}
@@ -22,6 +19,11 @@
                             Now</a>
                     </p>
                 </form>
+                {% if messages %}
+                    {% for message in messages %}
+                    <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>

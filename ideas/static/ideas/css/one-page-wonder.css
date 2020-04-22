@@ -137,17 +137,14 @@ header.masthead .bg-circle-4 {
   right: 35%;
 }
 
-@media (min-width: 992px) {
-  header.masthead {
-    padding-top: calc(10rem + 55px);
-    padding-bottom: 10rem;
+@media only screen and (max-width: 600px) {
+  .main-heading{
+    font-size: 5rem;
   }
-  header.masthead .masthead-content .masthead-heading {
-    font-size: 6rem;
-  }
-  header.masthead .masthead-content .masthead-subheading {
-    font-size: 4rem;
-  }
+}
+
+.main-heading{
+  font-size: 5rem;
 }
 
 .bg-primary {
@@ -233,7 +230,6 @@ a.underline:hover:after {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    padding: 5rem;
     background: #E74C3C;
     background-repeat: no-repeat;
     background-position: center center;
@@ -293,4 +289,9 @@ a.underline:hover:after {
   select::-ms-expand {
     /* for IE 11 */
     display: none;
+  }
+
+  .custom-section{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }

@@ -227,14 +227,10 @@ a.underline:hover:after {
   }
 
   .custom-header{
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     background: #E74C3C;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
-    background-size: cover;
   }
 
   .custom-textarea{
@@ -292,6 +288,12 @@ a.underline:hover:after {
   }
 
   .custom-section{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
+
+  .scroll {
+    max-height: 100px;
+    overflow-y: auto;
+  }
+  .grid-item { width: 200px; }

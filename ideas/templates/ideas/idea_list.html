@@ -2,14 +2,14 @@
 {% load static %}
 {% block content %}
 <header class="custom-header text-center text-white">
-    <div class="container" style="height: 100%;">
+    <div class="container" style="height: 100vh;">
         <div class="row align-items-center h-100">
             <div class="col-lg-6 mx-auto">
                 <h1 class="mb-3">My Ideas</h1>
                 <div class="container h-100">
                     {% if ideas %}
                     {% for idea in ideas %}
-                    <a class="btn btn-primary btn-l mb-2 ml-1 rounded-pill"
+                    <a class="btn btn-primary btn-l m-1 rounded-pill"
                             href="{% url 'idea-update' idea.id %}">{{ idea.title }}</a>
                     {% endfor %}
                     {% else %}

@@ -2,22 +2,22 @@
 {% load static %}
 {% block content %}
 <header class="custom-header text-center text-white">
-    <div class="container" style="height: 100%;">
-        <div class="row align-items-center justify-content-center h-100">
+    <div class="container">
+        <div class="row h-100 align-items-center">
             <div class="col-lg mx-auto">
-                <h1 class="mb-3">Ideas for #{{ tag.name }}</h1>
+                <h1 class="mb-2">Ideas for #{{ tag.name }}</h1>
                 {% if ideas %}
-                    <div class="card-columns">
-                        {% for idea in ideas %}
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 class="card-title">{{ idea.title }}</h6>
-                                <p class="card-text">{{ idea.description }}</p>
-                                <p class="card-text"><small>- {{ idea.author }}</small></p>
-                            </div>
+                <div class="card-columns">
+                    {% for idea in ideas %}
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ idea.title }}</h6>
+                            <p class="card-text">{{ idea.description }}</p>
+                            <p class="card-text"><small>- {{ idea.author }}</small></p>
                         </div>
-                        {% endfor %}
                     </div>
+                    {% endfor %}
+                </div>
                 {% else %}
                 <p>No ideas found.</p>
                 {% endif %}
@@ -26,3 +26,27 @@
     </div>
 </header>
 {% endblock content %}
+<header class="custom-header text-center text-white">
+    <div class="container" style="min-height: 100vh;">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg mx-auto">
+                <h1 class="mb-3">Ideas for #{{ tag.name }}</h1>
+                {% if ideas %}
+                <div class="card-columns">
+                    {% for idea in ideas %}
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ idea.title }}</h6>
+                            <p class="card-text">{{ idea.description }}</p>
+                            <p class="card-text"><small>- {{ idea.author }}</small></p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p>No ideas found.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</header>

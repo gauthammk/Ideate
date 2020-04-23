@@ -21,7 +21,7 @@ def tagHome(request, pk):
                    }
         return render(request, 'ideas/tag_home.html', context)
     except Exception:
-        return render(request, 'ideas/error.html')
+        return render(request, 'ideas/error.html', {'error': 'The requested page could not be found.'})
     finally:
         selectedTag = None
 
@@ -42,7 +42,7 @@ def home(request):
         }
         return render(request, 'ideas/home.html', context)
     except Exception:
-        return render(request, 'ideas/error.html')
+        return render(request, 'ideas/error.html', {'error': 'The requested page could not be found.'})
     finally:
         user = None
 
@@ -69,7 +69,7 @@ def ideaList(request):
         context = {'ideas': ideas, 'title': 'My Ideas'}
         return render(request, 'ideas/idea_list.html', context)
     except Exception:
-        return render(request, 'ideas/error.html')
+        return render(request, 'ideas/error.html', {'error': 'The requested page could not be found.'})
     finally:
         ideas = None
 
@@ -77,7 +77,7 @@ def ideaList(request):
 @login_required
 def ideaUpdate(request, pk):
     try:
-        idea = Idea.objects.get(id=pk)
+        idea = Idea.objects.get(id=pk, author=request.user)
         if request.method == 'POST':
             form = IdeaUpdateForm(request.POST, instance=idea)
             if form.is_valid():
@@ -90,7 +90,7 @@ def ideaUpdate(request, pk):
                                                           'idea': idea,
                                                           'title': 'Update'})
     except Exception:
-        return render(request, 'ideas/error.html')
+        return render(request, 'ideas/error.html', {'error': 'The requested action could not be performed.'})
     finally:
         idea = None
 
@@ -104,6 +104,6 @@ def ideaDelete(request, pk):
         messages.success(request, f'Your idea has been deleted!')
         return redirect('idea-list')
     except Exception:
-        return render(request, 'ideas/error.html')
+        return render(request, 'ideas/error.html', {'error': 'The requested action could not be performed.'})
     finally:
         idea = None

@@ -10,6 +10,6 @@ class Tag(models.Model):
 
 class Idea(models.Model):
     title = models.CharField(max_length=30)
-    description = models.CharField(max_length=200, null=True)
+    description = models.CharField(max_length=500, null=True)
     tags = models.ManyToManyField(Tag)
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)

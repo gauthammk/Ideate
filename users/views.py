@@ -12,7 +12,7 @@ def register(request):
         if form.is_valid():
             form.save()
             messages.success(request, f'Your new account has been created!')
-            return redirect('index')
+            return redirect('login')
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form,
@@ -25,8 +25,8 @@ def update(request):
         form = UserUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Your new account has been updated!')
-            return redirect('home')
+            messages.success(request, f'Your account has been updated!')
+            return redirect('update')
     else:
         form = UserUpdateForm(instance=request.user)
     return render(request, 'users/update.html', {'form': form,
@@ -45,7 +45,7 @@ def loginUser(request):
                 return redirect('home')
             else:
                 messages.error(
-                    request, 'The username or password you have provided is incorrect.')
+                    request, f'The username or password you have provided is incorrect.')
                 return redirect('login')
     else:
         form = LoginForm()

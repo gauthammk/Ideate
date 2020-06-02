@@ -19,11 +19,13 @@
                             Now</a>
                     </p>
                 </form>
+                <div id="messages" class="fade-out">
                 {% if messages %}
                     {% for message in messages %}
-                    <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                    <p{% if message.tags %} class="{{ message.tags }} fade-out"{% endif %}>{{ message }}</p>
                     {% endfor %}
                 {% endif %}
+                </div>
             </div>
         </div>
     </div>

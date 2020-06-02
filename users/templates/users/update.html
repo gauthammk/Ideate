@@ -14,6 +14,11 @@
                         <button type="submit"
                             class="btn btn-primary btn-l rounded-pill mt-2 mb-2 font-weight-bold">UPDATE</button>
                     </form>
+                    {% if messages %}
+                        {% for message in messages %}
+                        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>

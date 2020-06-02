@@ -13,8 +13,15 @@
                             href="{% url 'idea-update' idea.id %}">{{ idea.title }}</a>
                     {% endfor %}
                     {% else %}
-                    <p>No ideas found. Create a new idea.</p>
+                    <p>No ideas found.<a href="{% url 'idea-create' %}"
+                            class="custom-links font-weight-bold ml-2">Create an Idea.</a>
+                    </p>
                     {% endif %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <p{% if message.tags %} class="{{ message.tags }} mt-1"{% endif %}>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
                 </div>
             </div>
         </div>

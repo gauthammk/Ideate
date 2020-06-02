@@ -18,6 +18,7 @@ def tagHome(request, pk):
         ideas = Idea.objects.filter(tags=selectedTag)
         context = {'tag': selectedTag,
                    'ideas': ideas,
+                   'title': '#' + selectedTag.name,
                    }
         return render(request, 'ideas/tag_home.html', context)
     except Exception:
@@ -55,7 +56,7 @@ def ideaCreate(request):
             form.instance.author = request.user
             form.save()
             messages.success(request, f'Your idea has been created!')
-            return redirect('home')
+            return redirect('idea-list')
     else:
         form = IdeaCreateForm()
     return render(request, 'ideas/idea_create.html', {'form': form,

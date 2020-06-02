@@ -5,7 +5,7 @@
  */
 
 body {
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   height: 100vh;
   font-weight: 100;
 }
@@ -16,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 800 !important;
 }
 
@@ -37,7 +37,7 @@ h6 {
 }
 
 .navbar-custom {
-  background-color: #E74C3C;
+  background-color: #e74c3c;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -45,11 +45,11 @@ h6 {
 .navbar-custom {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #E74C3C;
+  background-color: #e74c3c;
 }
 
 .navbar-custom .navbar-brand {
-  font-family: 'Montserrat'; 
+  font-family: "Montserrat";
   font-size: 1rem;
   text-transform: none;
   letter-spacing: 0.1rem;
@@ -78,7 +78,7 @@ header.masthead {
   position: relative;
   overflow: hidden;
   padding: 5rem;
-  background: #E74C3C;
+  background: #e74c3c;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -138,42 +138,46 @@ header.masthead .bg-circle-4 {
 }
 
 @media only screen and (max-width: 600px) {
-  .main-heading{
+  .main-heading {
     font-size: 5rem;
   }
 }
 
-.main-heading{
+.main-heading {
   font-size: 5rem;
 }
 
 .bg-primary {
-  background-color: #E74C3C !important;
+  background-color: #e74c3c !important;
 }
 
 .btn-primary {
   background-color: #ffffff !important;
   border-color: #ffffff !important;
-  color: #E74C3C;
+  color: #e74c3c;
   border-width: 0.2rem;
 }
 
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #E74C3C !important;
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+  background-color: #e74c3c !important;
   color: #ffffff;
   box-shadow: none !important;
 }
 
 .btn-secondary {
-  background-color: #E74C3C;
-  border-color: #E74C3C;
+  background-color: #e74c3c;
+  border-color: #e74c3c;
   border-width: 0.2rem;
 }
 
-.btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-secondary:hover {
   background-color: #ffffff !important;
-  border-color: #E74C3C !important;
-  color: #E74C3C;
+  border-color: #e74c3c !important;
+  color: #e74c3c;
   box-shadow: none !important;
 }
 
@@ -182,12 +186,12 @@ a.underline {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-  
+
   display: inline-block;
   position: relative;
 }
 
-a.underline:after {    
+a.underline:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -200,100 +204,109 @@ a.underline:after {
   width: 0;
 }
 
-a.underline:hover:after { 
-  width: 100%; 
-  left: 0; 
+a.underline:hover:after {
+  width: 100%;
+  left: 0;
 }
 
-.custom-input, .custom-input:active{
-    background-color: #E74C3C;
-    border-color: #ffffff;
-    border-width: 0.2rem;
-    color: #ffffff;
-    font-size: large;
-  }
-  
-  ::-webkit-input-placeholder{
-    color: #ffffff !important;
-  }
-  
-  .custom-input:focus {
-    background-color: #E74C3C!important;
-    color: #ffffff;
-    transition: all 0.4s;
-    border-color: #ffffff;
-    border-width: 0.4rem;
-    box-shadow: none;
-  }
+.custom-input,
+.custom-input:active {
+  background-color: #e74c3c;
+  border-color: #ffffff;
+  border-width: 0.2rem;
+  color: #ffffff;
+  font-size: large;
+}
 
-  .custom-header{
-    min-height: 100vh;
-    position: relative;
-    overflow: auto;
-    background: #E74C3C;
-  }
+::-webkit-input-placeholder {
+  color: #ffffff !important;
+}
 
-  .custom-textarea{
-    border-radius: 1rem;
-  }
+.custom-input:focus {
+  background-color: #e74c3c !important;
+  color: #ffffff;
+  transition: all 0.4s;
+  border-color: #ffffff;
+  border-width: 0.4rem;
+  box-shadow: none;
+}
 
-  .border{
-    background-color: #E74C3C;
-    border-color: #ffffff;
-    border-width: 0.2rem !important;
-    color: #ffffff;
-    font-size: large;
-    border-radius: 1rem;
-  }
-  
-  a.custom-links{
-    color: #ffffff;
-    font-weight: 5rem;
-  }
+.custom-header {
+  min-height: 100vh;
+  position: relative;
+  overflow: auto;
+  background: #e74c3c;
+}
 
-  .card{
-    background-color: #E74C3C;
-    border-color: #ffffff;
-    border-width: 0.2rem;
-    border-radius: 1rem;
-  }
+.custom-textarea {
+  border-radius: 1rem;
+}
 
-  .bootstrap-select {
-    background-color: #E74C3C;
-    border-color: #ffffff;
-    border-width: 0.2rem;
-    color: #ffffff;
-    font-size: large;
-    border-radius: 1rem;
-  }
-  
-  .bootstrap-select .btn{
-    background-color: #E74C3C;
-    border-color: #ffffff;
-    border-width: 0.2rem;
-    color: #ffffff !important;
-    font-size: large;
-    border-radius: 1rem;
-  }
+.border {
+  background-color: #e74c3c;
+  border-color: #ffffff;
+  border-width: 0.2rem !important;
+  color: #ffffff;
+  font-size: large;
+  border-radius: 1rem;
+}
 
-  .bootstrap-select .dropdown-menu {
-    border-width: 0.2rem;
-    font-size: large;
-    border-radius: 1rem;
-  }
+a.custom-links {
+  color: #ffffff;
+  font-weight: 5rem;
+}
 
-  select::-ms-expand {
-    /* for IE 11 */
-    display: none;
-  }
+.card {
+  background-color: #e74c3c;
+  border-color: #ffffff;
+  border-width: 0.2rem;
+  border-radius: 1rem;
+}
 
-  .custom-section{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
+.bootstrap-select {
+  background-color: #e74c3c;
+  border-color: #ffffff;
+  border-width: 0.2rem;
+  color: #ffffff;
+  font-size: large;
+  border-radius: 1rem;
+}
 
-  .scroll {
-    max-height: 100px;
-    overflow-y: auto;
-  }
-  .grid-item { width: 200px; }
+.bootstrap-select .btn,
+.btn:active {
+  background-color: #e74c3c !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  border-width: 0.2rem;
+  border-radius: 1rem;
+}
+
+.bootstrap-select .dropdown-menu {
+  border-width: 0.2rem;
+  font-size: large;
+  border-radius: 1rem;
+}
+
+select::-ms-expand {
+  /* for IE 11 */
+  display: none;
+}
+
+.custom-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.scroll {
+  max-height: 100px;
+  overflow-y: auto;
+}
+.grid-item {
+  width: 200px;
+}
+
+.shadow {
+  -webkit-box-shadow: 22px 26px 54px 34px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 22px 26px 54px 34px rgba(0, 0, 0, 0.75);
+  box-shadow: 22px 26px 54px 34px rgba(0, 0, 0, 0.75);
+}
